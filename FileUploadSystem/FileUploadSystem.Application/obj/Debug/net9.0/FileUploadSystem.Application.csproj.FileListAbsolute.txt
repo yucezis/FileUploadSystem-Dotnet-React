@@ -1,0 +1,16 @@
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\bin\Debug\net9.0\FileUploadSystem.Application.deps.json
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\bin\Debug\net9.0\FileUploadSystem.Application.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\bin\Debug\net9.0\FileUploadSystem.Application.pdb
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\bin\Debug\net9.0\FileUploadSystem.Domain.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\bin\Debug\net9.0\FileUploadSystem.Domain.pdb
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\FileUploadSystem.Application.csproj.AssemblyReference.cache
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\FileUploadSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\FileUploadSystem.Application.AssemblyInfoInputs.cache
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\FileUploadSystem.Application.AssemblyInfo.cs
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\FileUploadSystem.Application.csproj.CoreCompileInputs.cache
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\FileUploadSystem.Application.sourcelink.json
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\FileUplo.37E30259.Up2Date
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\FileUploadSystem.Application.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\refint\FileUploadSystem.Application.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\FileUploadSystem.Application.pdb
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.Application\obj\Debug\net9.0\ref\FileUploadSystem.Application.dll

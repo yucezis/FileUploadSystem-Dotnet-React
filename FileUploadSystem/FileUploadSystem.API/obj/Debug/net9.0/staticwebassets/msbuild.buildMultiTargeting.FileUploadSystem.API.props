@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\FileUploadSystem.API.props" />
+</Project>

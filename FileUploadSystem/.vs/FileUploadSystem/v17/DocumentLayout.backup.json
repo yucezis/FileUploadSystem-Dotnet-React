@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5AA13492-84B9-4C6F-B870-B29E82BF16BD}|FileUploadSystem.Application\\FileUploadSystem.Application.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.application\\fileuploadsystem.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5AA13492-84B9-4C6F-B870-B29E82BF16BD}|FileUploadSystem.Application\\FileUploadSystem.Application.csproj|solutionrelative:fileuploadsystem.application\\fileuploadsystem.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.infrastructure\\migrations\\20260516180052_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|solutionrelative:fileuploadsystem.infrastructure\\migrations\\20260516180052_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.infrastructure\\fileuploadsystem.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|solutionrelative:fileuploadsystem.infrastructure\\fileuploadsystem.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|solutionrelative:fileuploadsystem.infrastructure\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1761FD73-9700-4239-988B-452E29768392}|FileUploadSystem.API\\FileUploadSystem.API.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761FD73-9700-4239-988B-452E29768392}|FileUploadSystem.API\\FileUploadSystem.API.csproj|solutionrelative:fileuploadsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B897915A-1599-41FC-8650-DF9C3EF64062}|FileUploadSystem.Domain\\FileUploadSystem.Domain.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B897915A-1599-41FC-8650-DF9C3EF64062}|FileUploadSystem.Domain\\FileUploadSystem.Domain.csproj|solutionrelative:fileuploadsystem.domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B897915A-1599-41FC-8650-DF9C3EF64062}|FileUploadSystem.Domain\\FileUploadSystem.Domain.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.domain\\entities\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B897915A-1599-41FC-8650-DF9C3EF64062}|FileUploadSystem.Domain\\FileUploadSystem.Domain.csproj|solutionrelative:fileuploadsystem.domain\\entities\\document.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B897915A-1599-41FC-8650-DF9C3EF64062}|FileUploadSystem.Domain\\FileUploadSystem.Domain.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.domain\\entities\\documentversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B897915A-1599-41FC-8650-DF9C3EF64062}|FileUploadSystem.Domain\\FileUploadSystem.Domain.csproj|solutionrelative:fileuploadsystem.domain\\entities\\documentversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B897915A-1599-41FC-8650-DF9C3EF64062}|FileUploadSystem.Domain\\FileUploadSystem.Domain.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.domain\\entities\\sharedlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B897915A-1599-41FC-8650-DF9C3EF64062}|FileUploadSystem.Domain\\FileUploadSystem.Domain.csproj|solutionrelative:fileuploadsystem.domain\\entities\\sharedlink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,48 +38,107 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FileUploadSystem.Application",
-              "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\FileUploadSystem.Application.csproj",
-              "RelativeDocumentMoniker": "FileUploadSystem.Application\\FileUploadSystem.Application.csproj",
-              "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\FileUploadSystem.Application.csproj",
-              "RelativeToolTip": "FileUploadSystem.Application\\FileUploadSystem.Application.csproj",
+              "Title": "20260516180052_InitialCreate.cs",
+              "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\Migrations\\20260516180052_InitialCreate.cs",
+              "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\Migrations\\20260516180052_InitialCreate.cs",
+              "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\Migrations\\20260516180052_InitialCreate.cs",
+              "RelativeToolTip": "FileUploadSystem.Infrastructure\\Migrations\\20260516180052_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-15T17:51:25.738Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T18:00:53.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\Program.cs",
+              "RelativeDocumentMoniker": "FileUploadSystem.API\\Program.cs",
+              "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\Program.cs",
+              "RelativeToolTip": "FileUploadSystem.API\\Program.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAIBJwA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:53:11.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FileUploadSystem.Infrastructure",
-              "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj",
-              "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj",
-              "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj",
-              "RelativeToolTip": "FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-15T17:51:09.691Z",
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\ApplicationDbContext.cs",
+              "RelativeToolTip": "FileUploadSystem.Infrastructure\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAUwAoAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:50:10.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SharedLink.cs",
+              "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Domain\\Entities\\SharedLink.cs",
+              "RelativeDocumentMoniker": "FileUploadSystem.Domain\\Entities\\SharedLink.cs",
+              "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Domain\\Entities\\SharedLink.cs",
+              "RelativeToolTip": "FileUploadSystem.Domain\\Entities\\SharedLink.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:46:10.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DocumentVersion.cs",
+              "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Domain\\Entities\\DocumentVersion.cs",
+              "RelativeDocumentMoniker": "FileUploadSystem.Domain\\Entities\\DocumentVersion.cs",
+              "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Domain\\Entities\\DocumentVersion.cs",
+              "RelativeToolTip": "FileUploadSystem.Domain\\Entities\\DocumentVersion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:43:17.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Document.cs",
+              "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Domain\\Entities\\Document.cs",
+              "RelativeDocumentMoniker": "FileUploadSystem.Domain\\Entities\\Document.cs",
+              "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Domain\\Entities\\Document.cs",
+              "RelativeToolTip": "FileUploadSystem.Domain\\Entities\\Document.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:40:46.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "FileUploadSystem.Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Domain\\Entities\\User.cs",
+              "RelativeToolTip": "FileUploadSystem.Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T17:38:09.21Z",
               "EditorCaption": ""
             }
           ]
         },
         {
           "DockedWidth": 488,
-          "SelectedChildIndex": -1,
-          "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 591,
           "SelectedChildIndex": -1,
           "Children": [
             {
