@@ -171,3 +171,8 @@ C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug
 C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\BCrypt-Net-Next.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
