@@ -176,3 +176,7 @@ C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug
 C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\CommunityToolkit.HighPerformance.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\Minio.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\System.IO.Hashing.dll
+C:\all_projects\FileUploadSystem\FileUploadSystem\FileUploadSystem.API\bin\Debug\net9.0\System.Reactive.dll

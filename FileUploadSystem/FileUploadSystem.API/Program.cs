@@ -3,7 +3,9 @@ using FileUploadSystem.Application.Interfaces;
 using FileUploadSystem.Application.Settings;
 using FileUploadSystem.Infrastructure;
 using FileUploadSystem.Infrastructure.Auth;
+using FileUploadSystem.Infrastructure.Interface;
 using FileUploadSystem.Infrastructure.Persistence;
+using FileUploadSystem.Infrastructure.Storage;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -25,6 +27,7 @@ var jwtSettings = builder.Configuration.GetSection("Jwt").Get<JwtSettings>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IStorageService, MinioStorageService>();
 
 builder.Services.AddAuthentication(options =>
 {
