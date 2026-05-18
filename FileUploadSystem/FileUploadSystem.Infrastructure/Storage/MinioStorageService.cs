@@ -17,6 +17,7 @@ namespace FileUploadSystem.Infrastructure.Storage
             _minioClient = new MinioClient()
                 .WithEndpoint(configuration["MinIO:Endpoint"])
                 .WithCredentials(configuration["MinIO:AccessKey"], configuration["MinIO:SecretKey"])
+                .WithSSL(false)
                 .Build();
         }
 
@@ -52,47 +53,37 @@ namespace FileUploadSystem.Infrastructure.Storage
 
         public async Task<string> UploadChunkAsync(Stream chunkStream, string uploadId, int chunkIndex)
         {
-            // Her parçayı "temp/{uploadId}/part_{chunkIndex}" isimli geçici bir yola kaydediyoruz
-            var chunkName = $"temp/{uploadId}/part_{chunkIndex}";
+            var tempFilePath = Path.Combine(Path.GetTempPath(), $"{uploadId}.tmp");
 
-            var putObjectArgs = new PutObjectArgs()
-                .WithBucket(_bucketName)
-                .WithObject(chunkName)
-                .WithStreamData(chunkStream)
-                .WithObjectSize(chunkStream.Length);
+            using (var fileStream = new FileStream(tempFilePath, FileMode.Append, FileAccess.Write, FileShare.None))
+            {
+                await chunkStream.CopyToAsync(fileStream);
+            }
 
-            await _minioClient.PutObjectAsync(putObjectArgs);
-            return chunkName;
+            return tempFilePath;
         }
 
         public async Task<string> MergeChunksAsync(string uploadId, string fileName, int totalChunks, string contentType)
         {
             var finalPath = $"uploads/{fileName}";
-            var sourceArgs = new List<ComposeSourceArgs>();
+            var tempFilePath = Path.Combine(Path.GetTempPath(), $"{uploadId}.tmp");
 
-            // Yüklenen tüm parçaların yollarını sırasıyla listeye ekliyoruz
-            for (int i = 1; i <= totalChunks; i++)
+            if (!File.Exists(tempFilePath))
+                throw new Exception("Birleştirilecek dosya bulunamadı.");
+
+            using (var fileStream = new FileStream(tempFilePath, FileMode.Open, FileAccess.Read))
             {
-                sourceArgs.Add(new ComposeSourceArgs()
+                var putObjectArgs = new PutObjectArgs()
                     .WithBucket(_bucketName)
-                    .WithObject($"temp/{uploadId}/part_{i}"));
+                    .WithObject(finalPath)
+                    .WithStreamData(fileStream)
+                    .WithObjectSize(fileStream.Length)
+                    .WithContentType(contentType);
+
+                await _minioClient.PutObjectAsync(putObjectArgs);
             }
 
-            // MinIO'ya "Bu kaynak parçaları al ve finalPath altında birleştir" emri veriyoruz
-            var composeArgs = new ComposeObjectArgs()
-                .WithBucket(_bucketName)
-                .WithObject(finalPath)
-                .WithSources(sourceArgs);
-
-            await _minioClient.ComposeObjectAsync(composeArgs);
-
-            // Temizlik: Birleştirme bitince MinIO'daki geçici (temp) parçaları siliyoruz
-            for (int i = 1; i <= totalChunks; i++)
-            {
-                await _minioClient.RemoveObjectAsync(new RemoveObjectArgs()
-                    .WithBucket(_bucketName)
-                    .WithObject($"temp/{uploadId}/part_{i}"));
-            }
+            File.Delete(tempFilePath);
 
             return finalPath;
         }
