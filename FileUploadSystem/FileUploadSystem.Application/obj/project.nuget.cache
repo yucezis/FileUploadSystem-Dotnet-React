@@ -1,8 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "9aq7RSI9hmc=",
+  "dgSpecHash": "8+0bqHV3W6k=",
   "success": true,
   "projectFilePath": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\FileUploadSystem.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.aspnetcore.http\\2.3.10\\microsoft.aspnetcore.http.2.3.10.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.9\\microsoft.aspnetcore.http.abstractions.2.3.9.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.3.0\\microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.3.9\\microsoft.aspnetcore.webutilities.2.3.9.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.extensions.objectpool\\8.0.11\\microsoft.extensions.objectpool.8.0.11.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.extensions.options\\8.0.2\\microsoft.extensions.options.8.0.2.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.net.http.headers\\2.3.9\\microsoft.net.http.headers.2.3.9.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
