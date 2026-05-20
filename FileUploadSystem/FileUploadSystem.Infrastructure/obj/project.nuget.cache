@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QviXQa/Qx+w=",
+  "dgSpecHash": "51pzYoTLpk8=",
   "success": true,
   "projectFilePath": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,7 @@
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\minio\\7.0.0\\minio.7.0.0.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\sixlabors.imagesharp\\4.0.0\\sixlabors.imagesharp.4.0.0.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\system.buffers\\4.6.0\\system.buffers.4.6.0.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",

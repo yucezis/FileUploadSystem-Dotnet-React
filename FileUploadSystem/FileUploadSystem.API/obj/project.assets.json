@@ -1308,6 +1308,26 @@
           }
         }
       },
+      "SixLabors.ImageSharp/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Hashing": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/SixLabors.ImageSharp.props": {},
+          "build/SixLabors.ImageSharp.targets": {}
+        }
+      },
       "Swashbuckle.AspNetCore/9.0.6": {
         "type": "package",
         "dependencies": {
@@ -2036,7 +2056,8 @@
           "BCrypt.Net-Next": "4.2.0",
           "FileUploadSystem.Application": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.16",
-          "Minio": "7.0.0"
+          "Minio": "7.0.0",
+          "SixLabors.ImageSharp": "4.0.0"
         },
         "compile": {
           "bin/placeholder/FileUploadSystem.Infrastructure.dll": {}
@@ -4523,6 +4544,25 @@
         "newtonsoft.json.nuspec"
       ]
     },
+    "SixLabors.ImageSharp/4.0.0": {
+      "sha512": "6Ft5sclM1t5bY+P0SsLLGwXIAgmDASFFD9hD0tlEcfFCU8Yj9nR7ZzaqCL/p+SIfqoe8jLKFHD7LFPRJPGXZ5w==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "build/SixLabors.ImageSharp.targets",
+        "build/net472/SixLabors.Licensing.dll",
+        "build/net8.0/SixLabors.Licensing.dll",
+        "lib/net8.0/SixLabors.ImageSharp.dll",
+        "lib/net8.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.4.0.0.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/9.0.6": {
       "sha512": "q/UfEAgrk6qQyjHXgsW9ILw0YZLfmPtWUY4wYijliX6supozC+TkzU0G6FTnn/dPYxnChjM8g8lHjWHF6VKy+A==",
       "type": "package",
@@ -5726,6 +5766,7 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.16",
       "Microsoft.AspNetCore.OpenApi >= 9.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.16",
+      "SixLabors.ImageSharp >= 4.0.0",
       "Swashbuckle.AspNetCore >= 9.0.6"
     ]
   },
@@ -5807,6 +5848,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[9.0.16, )"
+          },
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[4.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

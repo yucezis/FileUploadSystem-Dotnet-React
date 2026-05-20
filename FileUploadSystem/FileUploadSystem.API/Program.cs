@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Hangfire;
+using FileUploadSystem.Infrastructure.Jobs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -58,7 +59,10 @@ builder.Services.AddHangfire(configuration => configuration
     .UseRecommendedSerializerSettings()
     .UseSqlServerStorage(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IThumbnailJob, ThumbnailJob>();
+
 var app = builder.Build();
+
 
 if (app.Environment.IsDevelopment())
 {

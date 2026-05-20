@@ -211,6 +211,10 @@
             "Minio": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             }
           },
           "imports": [

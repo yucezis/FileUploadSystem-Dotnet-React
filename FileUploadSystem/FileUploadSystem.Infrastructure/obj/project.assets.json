@@ -1123,6 +1123,26 @@
           "buildTransitive/Mono.TextTemplating.targets": {}
         }
       },
+      "SixLabors.ImageSharp/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO.Hashing": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/SixLabors.ImageSharp.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/SixLabors.ImageSharp.props": {},
+          "build/SixLabors.ImageSharp.targets": {}
+        }
+      },
       "System.Buffers/4.6.0": {
         "type": "package",
         "compile": {
@@ -3875,6 +3895,25 @@
         "readme.md"
       ]
     },
+    "SixLabors.ImageSharp/4.0.0": {
+      "sha512": "6Ft5sclM1t5bY+P0SsLLGwXIAgmDASFFD9hD0tlEcfFCU8Yj9nR7ZzaqCL/p+SIfqoe8jLKFHD7LFPRJPGXZ5w==",
+      "type": "package",
+      "path": "sixlabors.imagesharp/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "build/SixLabors.ImageSharp.props",
+        "build/SixLabors.ImageSharp.targets",
+        "build/net472/SixLabors.Licensing.dll",
+        "build/net8.0/SixLabors.Licensing.dll",
+        "lib/net8.0/SixLabors.ImageSharp.dll",
+        "lib/net8.0/SixLabors.ImageSharp.xml",
+        "sixlabors.imagesharp.128.png",
+        "sixlabors.imagesharp.4.0.0.nupkg.sha512",
+        "sixlabors.imagesharp.nuspec"
+      ]
+    },
     "System.Buffers/4.6.0": {
       "sha512": "lN6tZi7Q46zFzAbRYXTIvfXcyvQQgxnY7Xm6C6xQ9784dEL1amjM6S6Iw4ZpsvesAKnRVsM4scrDQaDqSClkjA==",
       "type": "package",
@@ -5162,7 +5201,8 @@
       "FileUploadSystem.Application >= 1.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.16",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.16",
-      "Minio >= 7.0.0"
+      "Minio >= 7.0.0",
+      "SixLabors.ImageSharp >= 4.0.0"
     ]
   },
   "packageFolders": {
@@ -5236,6 +5276,10 @@
           "Minio": {
             "target": "Package",
             "version": "[7.0.0, )"
+          },
+          "SixLabors.ImageSharp": {
+            "target": "Package",
+            "version": "[4.0.0, )"
           }
         },
         "imports": [

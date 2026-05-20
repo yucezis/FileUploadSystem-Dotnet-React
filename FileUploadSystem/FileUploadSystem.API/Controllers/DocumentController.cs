@@ -5,21 +5,27 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using FileUploadSystem.Application.Dtos;
+using Hangfire; // Hangfire kütüphanesini ekledik
 
 namespace FileUploadSystem.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize] 
+    [Authorize]
     public class DocumentController : ControllerBase
     {
         private readonly IStorageService _storageService;
-        private readonly ApplicationDbContext _context; 
+        private readonly ApplicationDbContext _context;
+        private readonly IBackgroundJobClient _backgroundJobClient; 
 
-        public DocumentController(IStorageService storageService, ApplicationDbContext context)
+        public DocumentController(
+            IStorageService storageService,
+            ApplicationDbContext context,
+            IBackgroundJobClient backgroundJobClient)
         {
             _storageService = storageService;
             _context = context;
+            _backgroundJobClient = backgroundJobClient;
         }
 
         [HttpPost("upload")]
@@ -53,7 +59,7 @@ namespace FileUploadSystem.API.Controllers
                 {
                     Id = Guid.NewGuid(),
                     DocumentId = documentId,
-                    VersionNumber = 1, 
+                    VersionNumber = 1,
                     StorageKey = uploadedPath,
                     FileSizeBytes = file.Length,
                     ContentType = file.ContentType,
@@ -64,14 +70,15 @@ namespace FileUploadSystem.API.Controllers
                 _context.DocumentVersions.Add(documentVersion);
                 await _context.SaveChangesAsync();
 
-                return Ok(new { Message = "Dosya başarıyla yüklendi!", Path = uploadedPath });
+                _backgroundJobClient.Enqueue<IThumbnailJob>(job => job.GenerateThumbnailAsync(uploadedPath, file.ContentType));
+
+                return Ok(new { Message = "Dosya başarıyla yüklendi! Resim işlemleri arka planda devam ediyor.", Path = uploadedPath });
             }
             catch (Exception ex)
             {
                 return StatusCode(500, $"Sunucu hatası: {ex.Message}");
             }
         }
-
 
         [HttpPost("chunked-upload")]
         public async Task<IActionResult> UploadChunk([FromForm] ChunkUploadRequest request)
@@ -121,7 +128,9 @@ namespace FileUploadSystem.API.Controllers
                     _context.DocumentVersions.Add(documentVersion);
                     await _context.SaveChangesAsync();
 
-                    return Ok(new { Message = "Tüm parçalar başarıyla birleştirildi ve kaydedildi!", Path = finalPath });
+                    _backgroundJobClient.Enqueue<IThumbnailJob>(job => job.GenerateThumbnailAsync(finalPath, request.File.ContentType));
+
+                    return Ok(new { Message = "Tüm parçalar başarıyla birleştirildi ve kaydedildi! Resim işlemleri arka planda devam ediyor.", Path = finalPath });
                 }
 
                 return Ok(new { Message = $"Parça {request.ChunkIndex}/{request.TotalChunks} başarıyla yüklendi." });
