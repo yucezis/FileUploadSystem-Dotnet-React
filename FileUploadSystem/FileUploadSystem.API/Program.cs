@@ -49,7 +49,7 @@ builder.Services.AddAuthentication(options =>
         ValidIssuer = jwtSettings?.Issuer,
         ValidAudience = jwtSettings?.Audience,
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings?.SecretKey ?? string.Empty)),
-        ClockSkew = TimeSpan.Zero 
+        ClockSkew = TimeSpan.Zero
     };
 });
 
@@ -61,14 +61,24 @@ builder.Services.AddHangfire(configuration => configuration
 
 builder.Services.AddScoped<IThumbnailJob, ThumbnailJob>();
 
-var app = builder.Build();
+// 1. EKLENEN KISIM: CORS Politikasý Tanýmlama
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp",
+        policy => policy
+            .WithOrigins("http://localhost:5173", "http://localhost:5174") 
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
 
+var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -77,6 +87,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// 2. EKLENEN KISIM: CORS Politikasýný Uygulama (Kimlik doðrulamadan hemen önce olmalý!)
+app.UseCors("AllowReactApp");
 
 app.UseAuthentication();
 app.UseAuthorization();

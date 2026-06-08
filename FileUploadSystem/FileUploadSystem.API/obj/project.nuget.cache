@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LnS+6TL+4Zg=",
+  "dgSpecHash": "GNTydBdqI+k=",
   "success": true,
   "projectFilePath": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\FileUploadSystem.API.csproj",
   "expectedPackageFiles": [
@@ -65,7 +65,7 @@
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\minio\\7.0.0\\minio.7.0.0.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\newtonsoft.json\\11.0.1\\newtonsoft.json.11.0.1.nupkg.sha512",
-    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\sixlabors.imagesharp\\4.0.0\\sixlabors.imagesharp.4.0.0.nupkg.sha512",
+    "C:\\Users\\Zişan Yüce\\.nuget\\packages\\sixlabors.imagesharp\\2.1.9\\sixlabors.imagesharp.2.1.9.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\swashbuckle.aspnetcore\\9.0.6\\swashbuckle.aspnetcore.9.0.6.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\9.0.6\\swashbuckle.aspnetcore.swagger.9.0.6.nupkg.sha512",
     "C:\\Users\\Zişan Yüce\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\9.0.6\\swashbuckle.aspnetcore.swaggergen.9.0.6.nupkg.sha512",

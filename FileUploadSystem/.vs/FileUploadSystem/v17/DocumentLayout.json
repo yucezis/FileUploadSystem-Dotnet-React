@@ -3,24 +3,27 @@
   "WorkspaceRootPath": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1761FD73-9700-4239-988B-452E29768392}|FileUploadSystem.API\\FileUploadSystem.API.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1761FD73-9700-4239-988B-452E29768392}|FileUploadSystem.API\\FileUploadSystem.API.csproj|solutionrelative:fileuploadsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Zi\u015Fan Y\u00FCce\\.nuget\\packages\\sixlabors.imagesharp\\4.0.0\\build\\SixLabors.ImageSharp.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.infrastructure\\job\\thumbnailjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|solutionrelative:fileuploadsystem.infrastructure\\job\\thumbnailjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5AA13492-84B9-4C6F-B870-B29E82BF16BD}|FileUploadSystem.Application\\FileUploadSystem.Application.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.application\\interfaces\\ithumbnailjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5AA13492-84B9-4C6F-B870-B29E82BF16BD}|FileUploadSystem.Application\\FileUploadSystem.Application.csproj|solutionrelative:fileuploadsystem.application\\interfaces\\ithumbnailjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1761FD73-9700-4239-988B-452E29768392}|FileUploadSystem.API\\FileUploadSystem.API.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.api\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1761FD73-9700-4239-988B-452E29768392}|FileUploadSystem.API\\FileUploadSystem.API.csproj|solutionrelative:fileuploadsystem.api\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1761FD73-9700-4239-988B-452E29768392}|FileUploadSystem.API\\FileUploadSystem.API.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1761FD73-9700-4239-988B-452E29768392}|FileUploadSystem.API\\FileUploadSystem.API.csproj|solutionrelative:fileuploadsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.infrastructure\\fileuploadsystem.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|solutionrelative:fileuploadsystem.infrastructure\\fileuploadsystem.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5AA13492-84B9-4C6F-B870-B29E82BF16BD}|FileUploadSystem.Application\\FileUploadSystem.Application.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.application\\interfaces\\ithumbnailjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5AA13492-84B9-4C6F-B870-B29E82BF16BD}|FileUploadSystem.Application\\FileUploadSystem.Application.csproj|solutionrelative:fileuploadsystem.application\\interfaces\\ithumbnailjob.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3A30A450-88AD-4682-B75A-2D900A2C793B}|FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj|c:\\all_projects\\fileuploadsystem\\fileuploadsystem\\fileuploadsystem.infrastructure\\storage\\miniostorageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -97,20 +100,29 @@
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedHeight": 1138,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SixLabors.ImageSharp.targets",
+              "DocumentMoniker": "C:\\Users\\Zi\u015Fan Y\u00FCce\\.nuget\\packages\\sixlabors.imagesharp\\4.0.0\\build\\SixLabors.ImageSharp.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\Users\\Zi\u015Fan Y\u00FCce\\.nuget\\packages\\sixlabors.imagesharp\\4.0.0\\build\\SixLabors.ImageSharp.targets",
+              "ToolTip": "C:\\Users\\Zi\u015Fan Y\u00FCce\\.nuget\\packages\\sixlabors.imagesharp\\4.0.0\\build\\SixLabors.ImageSharp.targets",
+              "RelativeToolTip": "..\\..\\..\\Users\\Zi\u015Fan Y\u00FCce\\.nuget\\packages\\sixlabors.imagesharp\\4.0.0\\build\\SixLabors.ImageSharp.targets",
+              "ViewState": "AgIAABUAAAAAAAAAAAAqwBoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-06-08T11:22:39.12Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ThumbnailJob.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\Job\\ThumbnailJob.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\Job\\ThumbnailJob.cs",
@@ -123,7 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "IThumbnailJob.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Interfaces\\IThumbnailJob.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Interfaces\\IThumbnailJob.cs",
@@ -131,11 +143,12 @@
               "RelativeToolTip": "FileUploadSystem.Application\\Interfaces\\IThumbnailJob.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T16:05:00.778Z"
+              "WhenOpened": "2026-05-20T16:05:00.778Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "DocumentController.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\Controllers\\DocumentController.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.API\\Controllers\\DocumentController.cs",
@@ -147,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "FileUploadSystem.Infrastructure.csproj",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj",
               "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj",
@@ -155,11 +168,12 @@
               "RelativeToolTip": "FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-17T17:28:13.343Z"
+              "WhenOpened": "2026-05-17T17:28:13.343Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.API\\Controllers\\AuthController.cs",
@@ -171,19 +185,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\Program.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.API\\Program.cs",
               "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\Program.cs",
               "RelativeToolTip": "FileUploadSystem.API\\Program.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAjwD4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAcwBkAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-16T17:53:11.26Z"
+              "WhenOpened": "2026-05-16T17:53:11.26Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MinioStorageService.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\Storage\\MinioStorageService.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\Storage\\MinioStorageService.cs",
@@ -195,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\appsettings.json",
               "RelativeDocumentMoniker": "FileUploadSystem.API\\appsettings.json",
@@ -207,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ChunkUploadRequest.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Dtos\\ChunkUploadRequest.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Dtos\\ChunkUploadRequest.cs",
@@ -219,7 +234,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IStorageService.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Interfaces\\IStorageService.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Interfaces\\IStorageService.cs",
@@ -231,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UserRespository.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\Persistence\\UserRespository.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\Persistence\\UserRespository.cs",
@@ -243,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "FileUploadSystem.API\\Properties\\launchSettings.json",
@@ -255,7 +270,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "JwtTokenGenerator.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\Auth\\JwtTokenGenerator.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\Auth\\JwtTokenGenerator.cs",
@@ -267,7 +282,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Interfaces\\IAuthService.cs",
@@ -279,7 +294,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "IJwtTokenGenerator.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Interfaces\\IJwtTokenGenerator.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Interfaces\\IJwtTokenGenerator.cs",
@@ -291,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\Auth\\AuthService.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\Auth\\AuthService.cs",
@@ -303,7 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "IUserRespository.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Interfaces\\IUserRespository.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Interfaces\\IUserRespository.cs",
@@ -315,7 +330,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "AuthResponse.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Dtos\\AuthResponse.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Dtos\\AuthResponse.cs",
@@ -327,7 +342,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "LoginRequest.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Dtos\\LoginRequest.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Dtos\\LoginRequest.cs",
@@ -339,7 +354,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "RegisterRequest.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Dtos\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Dtos\\RegisterRequest.cs",
@@ -351,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Application\\Settings\\JwtSettings.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Application\\Settings\\JwtSettings.cs",
@@ -363,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "20260517134611_UpdatedUser.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Infrastructure\\Migrations\\20260517134611_UpdatedUser.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Infrastructure\\Migrations\\20260517134611_UpdatedUser.cs",
@@ -375,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "FileUploadSystem.Domain\\Entities\\User.cs",
@@ -388,9 +403,23 @@
           ]
         },
         {
-          "DockedWidth": 488,
+          "DockedHeight": 1467,
           "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 143,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
