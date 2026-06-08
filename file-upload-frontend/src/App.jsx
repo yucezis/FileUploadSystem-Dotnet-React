@@ -3,36 +3,10 @@ import { AuthProvider, AuthContext } from './context/AuthContext';
 import { useContext } from 'react';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import FileUploader from './components/FileUploader';
+import FileUploader from './components/FileUploader'; 
+import FileList from './components/FileList'; 
 
-const Dashboard = () => {
-    const { logout } = useContext(AuthContext);
-    return (
-        <div className="min-h-screen bg-[#fdf4f8] p-8" style={{ fontFamily: 'var(--font-family)' }}>
-            <div className="max-w-4xl mx-auto flex flex-col gap-10">
-                <div className="flex justify-between items-center bg-white/60 backdrop-blur-md p-6 rounded-3xl border border-white/40 shadow-sm">
-                    <h1 className="text-2xl font-bold text-[#1e1028]">NimbusDrive Dashboard</h1>
-                    <button 
-                        onClick={logout}
-                        className="px-6 py-2.5 rounded-xl font-semibold text-[#c45fa0] border border-[#c45fa0]/30 hover:bg-[#c45fa0]/10 transition-colors"
-                    >
-                        Çıkış Yap
-                    </button>
-                </div>
-
-                <div className="bg-white/40 backdrop-blur-md p-10 rounded-3xl border border-white/40 shadow-sm">
-                    <div className="text-center mb-8">
-                        <h2 className="text-xl font-bold text-[#1e1028]">Dosya Yükle</h2>
-                        <p className="text-[#8a6b85] mt-2">Güvenli MinIO deponuza yeni dosyalar ekleyin.</p>
-                    </div>
-                    
-                    <FileUploader />
-                </div>
-            </div>
-        </div>
-    );
-};
-
+// Giriş yapmamış kullanıcıları zorla Login'e atan korumalı rota bileşeni
 const ProtectedRoute = ({ children }) => {
     const { user } = useContext(AuthContext);
     if (!user) {
@@ -41,6 +15,55 @@ const ProtectedRoute = ({ children }) => {
     return children;
 };
 
+// Yenilenmiş Harika Dashboard Bileşenimiz
+const Dashboard = () => {
+    const { logout } = useContext(AuthContext);
+    
+    return (
+        <div className="min-h-screen relative overflow-hidden" style={{ fontFamily: 'var(--font-family)', background: "linear-gradient(135deg, #fce8f3 0%, #f0e6fb 30%, #e3eeff 65%, #d6f0ff 100%)" }}>
+            
+            {/* Arka plan dekoratif baloncukları */}
+            <div className="absolute top-[-10%] left-[-5%] w-96 h-96 bg-pink-300 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+            <div className="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-blue-300 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+
+            <div className="max-w-6xl mx-auto p-6 md:p-8 relative z-10 flex flex-col gap-8">
+                
+                {/* Header (Üst Menü) */}
+                <div className="flex justify-between items-center bg-white/60 backdrop-blur-md px-8 py-5 rounded-3xl border border-white/40 shadow-sm">
+                    <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: "linear-gradient(135deg, #c45fa0, #7ba7e8)" }}>
+                            <span className="text-white font-bold text-xl">N</span>
+                        </div>
+                        <h1 className="text-2xl font-bold text-[#1e1028]">NimbusDrive</h1>
+                    </div>
+                    <button 
+                        onClick={logout}
+                        className="px-6 py-2.5 rounded-xl font-semibold transition-all"
+                        style={{ color: "#c45fa0", border: "1px solid rgba(196,95,160,0.3)", background: "rgba(255,255,255,0.5)" }}
+                    >
+                        Çıkış Yap
+                    </button>
+                </div>
+
+                {/* Ana İçerik Izgarası */}
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    {/* Sol Taraf: Dosya Yükleme Alanı */}
+                    <div className="lg:col-span-1">
+                        <FileUploader />
+                    </div>
+
+                    {/* Sağ Taraf: Dosya Listesi ve Arama */}
+                    <div className="lg:col-span-2">
+                        <FileList />
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    );
+};
+
+// ANA UYGULAMA BİLEŞENİ (Eksik olan kısım burasıydı)
 function App() {
     return (
         <AuthProvider>
@@ -48,6 +71,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 
+                {/* Dashboard sadece giriş yapanlara açık! */}
                 <Route 
                     path="/" 
                     element={
@@ -61,4 +85,5 @@ function App() {
     );
 }
 
+// React'in aradığı sihirli kelime (export default)
 export default App;
