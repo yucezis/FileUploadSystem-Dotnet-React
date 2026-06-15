@@ -104,7 +104,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 1138,
+          "DockedHeight": 2486,
           "SelectedChildIndex": 6,
           "Children": [
             {
@@ -117,8 +117,7 @@
               "RelativeToolTip": "..\\..\\..\\Users\\Zi\u015Fan Y\u00FCce\\.nuget\\packages\\sixlabors.imagesharp\\4.0.0\\build\\SixLabors.ImageSharp.targets",
               "ViewState": "AgIAABUAAAAAAAAAAAAqwBoAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-06-08T11:22:39.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-08T11:22:39.12Z"
             },
             {
               "$type": "Document",
@@ -130,8 +129,7 @@
               "RelativeToolTip": "FileUploadSystem.Infrastructure\\Job\\ThumbnailJob.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T16:06:02.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T16:06:02.289Z"
             },
             {
               "$type": "Document",
@@ -143,8 +141,7 @@
               "RelativeToolTip": "FileUploadSystem.Application\\Interfaces\\IThumbnailJob.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T16:05:00.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T16:05:00.778Z"
             },
             {
               "$type": "Document",
@@ -168,8 +165,7 @@
               "RelativeToolTip": "FileUploadSystem.Infrastructure\\FileUploadSystem.Infrastructure.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-05-17T17:28:13.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-17T17:28:13.343Z"
             },
             {
               "$type": "Document",
@@ -191,7 +187,7 @@
               "RelativeDocumentMoniker": "FileUploadSystem.API\\Program.cs",
               "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\Program.cs",
               "RelativeToolTip": "FileUploadSystem.API\\Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAcwBkAAABaAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAswCkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-16T17:53:11.26Z",
               "EditorCaption": ""
@@ -403,7 +399,7 @@
           ]
         },
         {
-          "DockedHeight": 1467,
+          "DockedHeight": 119,
           "SelectedChildIndex": -1,
           "Children": [
             {

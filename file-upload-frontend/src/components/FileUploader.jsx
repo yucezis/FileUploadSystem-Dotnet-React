@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { UploadCloud, File as FileIcon, CheckCircle2, AlertCircle, X } from "lucide-react";
 import api from "../services/api";
 
-export default function FileUploader() {
+export default function FileUploader({ onUploadSuccess }) {
   const [isDragging, setIsDragging] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [progress, setProgress] = useState(0);
@@ -51,10 +51,8 @@ export default function FileUploader() {
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
 
-  // Parçalı Yükleme (Chunked Upload) Algoritması
   const uploadFile = async () => {
     if (!selectedFile) return;
-
     setStatus("uploading");
     setProgress(0);
 
@@ -89,6 +87,15 @@ export default function FileUploader() {
       }
 
       setStatus("success");
+
+      if (onUploadSuccess) {
+        onUploadSuccess({
+          id: crypto.randomUUID(), // Benzersiz ID (API'den gelene kadar geçici)
+          name: selectedFile.name,
+          size: (selectedFile.size / (1024 * 1024)).toFixed(2) + " MB",
+          uploadDate: new Date().toLocaleDateString("tr-TR", { day: '2-digit', month: 'short', year: 'numeric' })
+        });
+      }
     } catch (error) {
       setStatus("error");
       setErrorMessage("Yükleme sırasında bir hata oluştu. Lütfen tekrar deneyin.");
