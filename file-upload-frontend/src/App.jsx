@@ -6,7 +6,6 @@ import Register from './pages/Register';
 import FileUploader from './components/FileUploader'; 
 import FileList from './components/FileList';
 
-// Giriş yapmamış kullanıcıları zorla Login'e atan korumalı rota bileşeni
 const ProtectedRoute = ({ children }) => {
     const { user } = useContext(AuthContext);
     if (!user) {
@@ -18,16 +17,12 @@ const ProtectedRoute = ({ children }) => {
 const Dashboard = () => {
     const { logout } = useContext(AuthContext);
     
-    // Uygulamanın merkezi dosya durumu (Başlangıçta boş)
     const [files, setFiles] = useState([]);
 
-    // Yükleme başarılı olduğunda tetiklenen fonksiyon
     const handleUploadSuccess = (newFile) => {
-        // Yeni dosyayı eski dosyaların EN BAŞINA ekler!
         setFiles(prevFiles => [newFile, ...prevFiles]);
     };
 
-    // Silme işlemi
     const handleDelete = (id) => {
         setFiles(prevFiles => prevFiles.filter(f => f.id !== id));
     };
@@ -58,12 +53,10 @@ const Dashboard = () => {
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div className="lg:col-span-1">
-                        {/* Prop'u geçiriyoruz */}
                         <FileUploader onUploadSuccess={handleUploadSuccess} />
                     </div>
 
                     <div className="lg:col-span-2">
-                        {/* Propları geçiriyoruz */}
                         <FileList files={files} onDelete={handleDelete} />
                     </div>
                 </div>
@@ -73,7 +66,6 @@ const Dashboard = () => {
     );
 };
 
-// ANA UYGULAMA BİLEŞENİ (Eksik olan kısım burasıydı)
 function App() {
     return (
         <AuthProvider>
@@ -81,7 +73,6 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 
-                {/* Dashboard sadece giriş yapanlara açık! */}
                 <Route 
                     path="/" 
                     element={
@@ -95,5 +86,4 @@ function App() {
     );
 }
 
-// React'in aradığı sihirli kelime (export default)
 export default App;

@@ -20,7 +20,6 @@ const getFileIcon = (fileName) => {
   }
 };
 
-// Artık sahte veri yok! Verileri (files) ve silme işlemini (onDelete) Dashboard'dan alıyoruz.
 export default function FileList({ files, onDelete }) {
   const [searchTerm, setSearchTerm] = useState("");
 

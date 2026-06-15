@@ -8,11 +8,10 @@ export default function FileUploader({ onUploadSuccess }) {
   const [isDragging, setIsDragging] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
   const [progress, setProgress] = useState(0);
-  const [status, setStatus] = useState("idle"); // idle, uploading, success, error
+  const [status, setStatus] = useState("idle"); 
   const [errorMessage, setErrorMessage] = useState("");
   const fileInputRef = useRef(null);
 
-  // Sürükle-bırak olayları
   const handleDragOver = (e) => {
     e.preventDefault();
     setIsDragging(true);
@@ -56,18 +55,16 @@ export default function FileUploader({ onUploadSuccess }) {
     setStatus("uploading");
     setProgress(0);
 
-    const chunkSize = 5 * 1024 * 1024; // Her parça 5 MB
+    const chunkSize = 5 * 1024 * 1024; 
     const totalChunks = Math.ceil(selectedFile.size / chunkSize);
-    const uploadId = crypto.randomUUID(); // Bu dosyaya özel benzersiz kimlik
+    const uploadId = crypto.randomUUID(); 
 
     try {
       for (let chunkIndex = 1; chunkIndex <= totalChunks; chunkIndex++) {
-        // Dosyadan ilgili 5MB'lık parçayı kesiyoruz
         const start = (chunkIndex - 1) * chunkSize;
         const end = Math.min(start + chunkSize, selectedFile.size);
         const chunkBlob = selectedFile.slice(start, end);
 
-        // Backend'in beklediği ChunkUploadRequest DTO'suna uygun FormData hazırlıyoruz
         const formData = new FormData();
         formData.append("File", chunkBlob, selectedFile.name);
         formData.append("FileName", selectedFile.name);
@@ -76,12 +73,10 @@ export default function FileUploader({ onUploadSuccess }) {
         formData.append("TotalChunks", totalChunks);
         formData.append("TotalFileSize", selectedFile.size);
 
-        // Parçayı MinIO/Backend'e gönderiyoruz
         await api.post("/document/chunked-upload", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
 
-        // İlerlemeyi güncelle
         const currentProgress = Math.round((chunkIndex / totalChunks) * 100);
         setProgress(currentProgress);
       }
@@ -90,7 +85,7 @@ export default function FileUploader({ onUploadSuccess }) {
 
       if (onUploadSuccess) {
         onUploadSuccess({
-          id: crypto.randomUUID(), // Benzersiz ID (API'den gelene kadar geçici)
+          id: crypto.randomUUID(),
           name: selectedFile.name,
           size: (selectedFile.size / (1024 * 1024)).toFixed(2) + " MB",
           uploadDate: new Date().toLocaleDateString("tr-TR", { day: '2-digit', month: 'short', year: 'numeric' })
@@ -154,7 +149,6 @@ export default function FileUploader({ onUploadSuccess }) {
               animate={{ opacity: 1, scale: 1 }}
               className="flex flex-col gap-5"
             >
-              {/* Dosya Bilgisi Kartı */}
               <div className="flex items-center justify-between bg-white/80 p-4 rounded-2xl border border-white/40 shadow-sm">
                 <div className="flex items-center gap-4 overflow-hidden">
                   <div className="p-3 bg-[#eef3fe] rounded-xl text-[#7ba7e8]">
@@ -174,7 +168,6 @@ export default function FileUploader({ onUploadSuccess }) {
                 )}
               </div>
 
-              {/* İlerleme Çubuğu (Progress Bar) */}
               {(status === "uploading" || status === "success") && (
                 <div className="flex flex-col gap-2">
                   <div className="flex justify-between text-sm font-medium text-[#5a4060]">
@@ -193,7 +186,6 @@ export default function FileUploader({ onUploadSuccess }) {
                 </div>
               )}
 
-              {/* Hata Mesajı */}
               {status === "error" && (
                 <div className="flex items-center gap-2 text-[#d4183d] bg-[#fdf4f8] p-3 rounded-xl border border-[#d4183d]/20 text-sm font-medium">
                   <AlertCircle size={18} />
@@ -201,7 +193,6 @@ export default function FileUploader({ onUploadSuccess }) {
                 </div>
               )}
 
-              {/* Yükle Butonu */}
               {status === "idle" && (
                 <motion.button
                   onClick={uploadFile}
@@ -218,7 +209,6 @@ export default function FileUploader({ onUploadSuccess }) {
                 </motion.button>
               )}
 
-              {/* Başarı Durumu */}
               {status === "success" && (
                 <motion.button
                   onClick={clearSelection}
@@ -227,7 +217,7 @@ export default function FileUploader({ onUploadSuccess }) {
                   whileTap={{ scale: 0.98 }}
                 >
                   <CheckCircle2 size={18} />
-                  Yeni Dosya Yükle
+                  Tamamlandı
                 </motion.button>
               )}
             </motion.div>
