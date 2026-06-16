@@ -110,6 +110,22 @@
   },
   {
     "ContainingType": "FileUploadSystem.API.Controllers.DocumentController",
+    "Method": "DownloadFile",
+    "RelativePath": "api/Document/download/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileUploadSystem.API.Controllers.DocumentController",
     "Method": "UploadFile",
     "RelativePath": "api/Document/upload",
     "HttpMethod": "POST",

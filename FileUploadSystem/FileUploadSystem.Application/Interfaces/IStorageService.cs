@@ -24,6 +24,7 @@ namespace FileUploadSystem.Application.Interfaces
 
             Task<string> UploadChunkAsync(Stream chunkStream, string uploadId, int chunkIndex);
             Task<string> MergeChunksAsync(string uploadId, string fileName, int totalChunks, string contentType);
-        }
+            Task<Stream> DownloadFileAsync(string storageKey);
+    }
     
 }

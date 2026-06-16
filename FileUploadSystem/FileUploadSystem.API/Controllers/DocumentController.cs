@@ -168,5 +168,37 @@ namespace FileUploadSystem.API.Controllers
                 return StatusCode(500, $"Sunucu hatası: {ex.Message}");
             }
         }
+
+        [HttpGet("download/{id}")]
+        [Authorize]
+        public async Task<IActionResult> DownloadFile(Guid id)
+        {
+            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (!Guid.TryParse(userIdString, out Guid userId))
+                return Unauthorized("Geçersiz kullanıcı kimliği.");
+
+            var document = await _context.Documents
+                .Include(d => d.DocumentVersions) 
+                .FirstOrDefaultAsync(d => d.Id == id && d.UserId == userId && !d.IsDeleted);
+
+            if (document == null)
+                return NotFound("Dosya bulunamadı veya erişim yetkiniz yok.");
+
+            var latestVersion = document.DocumentVersions.OrderByDescending(v => v.VersionNumber).FirstOrDefault();
+            if (latestVersion == null)
+                return NotFound("Dosyanın içeriğine ulaşılamadı.");
+
+            try
+            {
+                var fileStream = await _storageService.DownloadFileAsync(latestVersion.StorageKey);
+
+                // 5. Dosyayı tarayıcıya "indirilebilir" formatta ve orijinal adıyla gönderiyoruz
+                return File(fileStream, latestVersion.ContentType, document.Name);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Dosya MinIO'dan çekilirken hata oluştu: {ex.Message}");
+            }
+        }
     }
 }

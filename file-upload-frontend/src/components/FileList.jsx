@@ -20,7 +20,7 @@ const getFileIcon = (fileName) => {
   }
 };
 
-export default function FileList({ files, onDelete }) {
+export default function FileList({ files, onDelete, onDownload }) { 
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredFiles = files.filter(file => 
@@ -94,8 +94,11 @@ export default function FileList({ files, onDelete }) {
                         <td className="py-4 text-sm" style={{ color: "#8a6b85" }}>{file.uploadDate}</td>
                         <td className="py-4 text-right">
                           <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button className="p-2 rounded-lg hover:bg-blue-50 text-blue-500 transition-colors" title="İndir">
-                              <Download size={18} />
+                            <button 
+                                onClick={() => onDownload(file.id, file.name)} 
+                                className="p-2 rounded-lg hover:bg-blue-50 text-blue-500 transition-colors" 
+                                title="İndir">
+                                <Download size={18} />
                             </button>
                             <button 
                               onClick={() => onDelete(file.id)}

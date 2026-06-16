@@ -87,5 +87,31 @@ namespace FileUploadSystem.Infrastructure.Storage
 
             return finalPath;
         }
+
+        public async Task<Stream> DownloadFileAsync(string storageKey)
+        {
+            var memoryStream = new MemoryStream();
+
+            try
+            {
+                var getObjectArgs = new GetObjectArgs()
+                    .WithBucket("documents") 
+                    .WithObject(storageKey)
+                    .WithCallbackStream(stream =>
+                    {
+                        stream.CopyTo(memoryStream);
+                    });
+
+                await _minioClient.GetObjectAsync(getObjectArgs).ConfigureAwait(false);
+
+                memoryStream.Position = 0;
+
+                return memoryStream;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Dosya MinIO'dan indirilirken bir hata oluştu: {ex.Message}");
+            }
+        }
     }
 }

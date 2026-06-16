@@ -1,7 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, AuthContext } from './context/AuthContext';
-import { useContext, useState, useEffect } from 'react'; // useEffect eklendi
-import api from './services/api'; // Backend'e istek atacağımız için eklendi
+import { useContext, useState, useEffect } from 'react'; 
+import api from './services/api'; 
 import Login from './pages/Login';
 import Register from './pages/Register';
 import FileUploader from './components/FileUploader'; 
@@ -19,42 +19,58 @@ const Dashboard = () => {
     const { logout } = useContext(AuthContext);
     const [files, setFiles] = useState([]);
 
-    // SAYFA YÜKLENDİĞİNDE DOSYALARI GETİREN KISIM
     useEffect(() => {
         const fetchFiles = async () => {
             try {
-                // Backend'deki dosya listeleme endpoint'ine istek atıyoruz
-                // Not: Endpoint adresin "/document/list" veya "/document" olabilir. 
-                // Kendi backend controller'ına göre burayı ayarlayabilirsin.
                 const response = await api.get("/document"); 
                 
-                // Gelen veriyi (Veritabanındaki formatı) tablomuzun beklediği formata çeviriyoruz
                 const formattedFiles = response.data.map(doc => ({
                     id: doc.id,
                     name: doc.name,
-                    // Veritabanında "Size" kolonu görünmüyor, eğer backend'den gelmiyorsa şimdilik tire koyabiliriz
                     size: doc.size ? (doc.size / (1024 * 1024)).toFixed(2) + " MB" : "-", 
                     uploadDate: new Date(doc.createdDate).toLocaleDateString("tr-TR", { 
                         day: '2-digit', month: 'short', year: 'numeric' 
                     })
                 }));
                 
-                setFiles(formattedFiles); // Çekilen verileri state'e kaydet
+                setFiles(formattedFiles);
             } catch (error) {
                 console.error("Dosyalar çekilirken hata oluştu:", error);
             }
         };
 
         fetchFiles();
-    }, []); // Sona eklenen [] (boş dizi), bu işlemin sayfa sadece ilk açıldığında 1 kez yapılmasını sağlar
+    }, []); 
 
     const handleUploadSuccess = (newFile) => {
         setFiles(prevFiles => [newFile, ...prevFiles]);
     };
 
     const handleDelete = async (id) => {
-        // İleride buraya api.delete(`/document/${id}`) eklenecek
         setFiles(prevFiles => prevFiles.filter(f => f.id !== id));
+    };
+
+    const handleDownload = async (fileId, fileName) => {
+        try {
+            const response = await api.get(`/document/download/${fileId}`, {
+                responseType: 'blob' 
+            });
+
+            const url = window.URL.createObjectURL(new Blob([response.data]));
+            
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', fileName); 
+            document.body.appendChild(link);
+            link.click();
+
+            link.parentNode.removeChild(link);
+            window.URL.revokeObjectURL(url);
+            
+        } catch (error) {
+            console.error("Dosya indirilirken hata oluştu:", error);
+            alert("Dosya indirilemedi. Lütfen tekrar deneyin.");
+        }
     };
     
     return (
@@ -87,7 +103,7 @@ const Dashboard = () => {
                     </div>
 
                     <div className="lg:col-span-2">
-                        <FileList files={files} onDelete={handleDelete} />
+                        <FileList files={files} onDelete={handleDelete} onDownload={handleDownload} />
                     </div>
                 </div>
                 
