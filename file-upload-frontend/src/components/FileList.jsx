@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, FileText, Image as ImageIcon, Archive, Music, Video, File, Trash2, Download } from "lucide-react";
+import { Search, FileText, Image as ImageIcon, Archive, Music, Video, File, Trash2, Download, Share2 } from "lucide-react"; // Share2 Eklendi
 
 const getFileIcon = (fileName) => {
   const extension = fileName.split('.').pop().toLowerCase();
@@ -20,7 +20,8 @@ const getFileIcon = (fileName) => {
   }
 };
 
-export default function FileList({ files, onDelete, onDownload }) { 
+// onShare prop'u eklendi
+export default function FileList({ files, onDelete, onDownload, onShare }) { 
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredFiles = files.filter(file => 
@@ -94,6 +95,15 @@ export default function FileList({ files, onDelete, onDownload }) {
                         <td className="py-4 text-sm" style={{ color: "#8a6b85" }}>{file.uploadDate}</td>
                         <td className="py-4 text-right">
                           <div className="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            
+                            {/* PAYLAŞ BUTONU */}
+                            <button 
+                                onClick={() => onShare(file.id)} 
+                                className="p-2 rounded-lg hover:bg-emerald-50 text-emerald-500 transition-colors" 
+                                title="Paylaş">
+                                <Share2 size={18} />
+                            </button>
+
                             <button 
                                 onClick={() => onDownload(file.id, file.name)} 
                                 className="p-2 rounded-lg hover:bg-blue-50 text-blue-500 transition-colors" 

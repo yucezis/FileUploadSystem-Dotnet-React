@@ -244,5 +244,67 @@ namespace FileUploadSystem.API.Controllers
                 return StatusCode(500, $"Dosya MinIO'dan çekilirken hata oluştu: {ex.Message}");
             }
         }
+
+        [HttpPost("{id}/share")]
+        [Authorize]
+        public async Task<IActionResult> CreateShareLink(Guid id)
+        {
+            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (!Guid.TryParse(userIdString, out Guid userId))
+                return Unauthorized("Geçersiz kullanıcı kimliği.");
+            var document = await _context.Documents
+                .FirstOrDefaultAsync(d => d.Id == id && d.UserId == userId && !d.IsDeleted);
+
+            if (document == null)
+                return NotFound("Dosya bulunamadı veya erişim yetkiniz yok.");
+
+            var shareToken = Guid.NewGuid();
+
+            var sharedLink = new Domain.Entities.SharedLink
+            {
+                Id = Guid.NewGuid(),
+                DocumentId = id,
+                Token = shareToken
+            };
+
+            _context.Set<Domain.Entities.SharedLink>().Add(sharedLink);
+            await _context.SaveChangesAsync();
+
+            return Ok(new
+            {
+                Message = "Paylaşım linki başarıyla oluşturuldu.",
+                Token = shareToken
+            });
+        }
+
+        [HttpGet("shared/{token}")]
+        [AllowAnonymous] 
+        public async Task<IActionResult> DownloadSharedFile(Guid token)
+        {
+            var sharedLink = await _context.Set<Domain.Entities.SharedLink>()
+                .Include(s => s.Document)
+                    .ThenInclude(d => d.DocumentVersions)
+                .FirstOrDefaultAsync(s => s.Token == token);
+
+            if (sharedLink == null || sharedLink.Document.IsDeleted)
+                return NotFound("Geçersiz veya süresi dolmuş bir bağlantı.");
+
+            var latestVersion = sharedLink.Document.DocumentVersions
+                .OrderByDescending(v => v.VersionNumber)
+                .FirstOrDefault();
+
+            if (latestVersion == null)
+                return NotFound("Dosyanın içeriğine ulaşılamadı.");
+
+            try
+            {
+                var fileStream = await _storageService.DownloadFileAsync(latestVersion.StorageKey);
+                return File(fileStream, latestVersion.ContentType, sharedLink.Document.Name);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Dosya MinIO'dan çekilirken hata oluştu: {ex.Message}");
+            }
+        }
     }
 }

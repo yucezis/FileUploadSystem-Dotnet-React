@@ -69,6 +69,22 @@
   },
   {
     "ContainingType": "FileUploadSystem.API.Controllers.DocumentController",
+    "Method": "CreateShareLink",
+    "RelativePath": "api/Document/{id}/share",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileUploadSystem.API.Controllers.DocumentController",
     "Method": "UploadChunk",
     "RelativePath": "api/Document/chunked-upload",
     "HttpMethod": "POST",
@@ -118,6 +134,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileUploadSystem.API.Controllers.DocumentController",
+    "Method": "DownloadSharedFile",
+    "RelativePath": "api/Document/shared/{token}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "token",
         "Type": "System.Guid",
         "IsRequired": true
       }

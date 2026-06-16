@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { Link, useNavigate } from "react-router-dom"; // useNavigate eklendi
+import { Link, useNavigate } from "react-router-dom";
 import api from "../services/api";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Cloud, HardDrive, Lock, Mail } from "lucide-react";
@@ -29,11 +29,11 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false); // İleride kullanmak istersen hazır
+  const [rememberMe, setRememberMe] = useState(false); 
   const [errorMsg, setErrorMsg] = useState(""); 
 
   const { login } = useContext(AuthContext);
-  const navigate = useNavigate(); // Yönlendiriciyi tanımladık
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,16 +41,13 @@ export default function Login() {
     setErrorMsg("");
 
     try {
-      // 1. Yanlışlıkla silinen API çağrısını geri ekledik
       const response = await api.post("/auth/login", { email, password });
       
-      // 2. Başarılı gelen token'ı Context'e kaydettik
       login({ 
         token: response.data.accessToken,
         email: email
       });
       
-      // 3. Giriş başarılı, doğrudan Dashboard'a (ana sayfaya) uçuruyoruz!
       navigate("/");
       
     } catch (error) {

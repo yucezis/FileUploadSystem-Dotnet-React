@@ -19,14 +19,12 @@ const Dashboard = () => {
     const { logout } = useContext(AuthContext);
     const [files, setFiles] = useState([]);
 
-    // 1. Dosyaları çekme fonksiyonu (Versiyon numarası mantığı eklendi)
     const fetchFiles = async () => {
         try {
             const response = await api.get("/document"); 
             
             const formattedFiles = response.data.map(doc => ({
                 id: doc.id,
-                // Versiyon 1'den büyükse ismin yanına (v2), (v3) ekle
                 name: doc.version > 1 ? `${doc.name} (v${doc.version})` : doc.name,
                 size: doc.size ? (doc.size / (1024 * 1024)).toFixed(2) + " MB" : "-", 
                 uploadDate: new Date(doc.createdDate).toLocaleDateString("tr-TR", { 
@@ -40,12 +38,10 @@ const Dashboard = () => {
         }
     };
 
-    // 2. Sayfa ilk açıldığında çalışır
     useEffect(() => {
         fetchFiles();
     }, []); 
 
-    // 3. Yükleme başarılı olunca direkt backend'den en güncel listeyi ister
     const handleUploadSuccess = () => {
         fetchFiles();
     };
@@ -74,6 +70,22 @@ const Dashboard = () => {
         } catch (error) {
             console.error("Dosya indirilirken hata oluştu:", error);
             alert("Dosya indirilemedi. Lütfen tekrar deneyin.");
+        }
+    };
+
+    const handleShare = async (id) => {
+        try {
+            const response = await api.post(`/document/${id}/share`);
+            
+            const shareLink = `https://localhost:7149/api/document/shared/${response.data.token}`;
+            
+            await navigator.clipboard.writeText(shareLink);
+            
+            alert("✨ Paylaşım bağlantısı panoya kopyalandı!\nBu linki gönderdiğin herkes dosyayı indirebilir.");
+            
+        } catch (error) {
+            console.error("Paylaşım linki oluşturulurken hata:", error);
+            alert("Paylaşım linki oluşturulamadı. Lütfen tekrar deneyin.");
         }
     };
     
@@ -107,7 +119,7 @@ const Dashboard = () => {
                     </div>
 
                     <div className="lg:col-span-2">
-                        <FileList files={files} onDelete={handleDelete} onDownload={handleDownload} />
+                        <FileList files={files} onDelete={handleDelete} onDownload={handleDownload} onShare={handleShare} />
                     </div>
                 </div>
                 

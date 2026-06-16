@@ -104,7 +104,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 2207,
+          "DockedHeight": 2473,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -115,7 +115,7 @@
               "RelativeDocumentMoniker": "FileUploadSystem.API\\Controllers\\DocumentController.cs",
               "ToolTip": "C:\\all_projects\\FileUploadSystem\\FileUploadSystem\\FileUploadSystem.API\\Controllers\\DocumentController.cs",
               "RelativeToolTip": "FileUploadSystem.API\\Controllers\\DocumentController.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAcwIAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAABMBAAAAAAAAAAArwBkBAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-17T17:30:37.033Z",
               "EditorCaption": ""
@@ -178,8 +178,7 @@
               "RelativeToolTip": "FileUploadSystem.Infrastructure\\Storage\\MinioStorageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-17T17:28:37.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-17T17:28:37.2Z"
             },
             {
               "$type": "Document",
@@ -400,7 +399,7 @@
           ]
         },
         {
-          "DockedHeight": 398,
+          "DockedHeight": 132,
           "SelectedChildIndex": -1,
           "Children": [
             {
