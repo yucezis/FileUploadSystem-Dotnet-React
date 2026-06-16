@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using FileUploadSystem.Application.Dtos;
-using Hangfire; // Hangfire kütüphanesini ekledik
+using Hangfire;
+using Microsoft.EntityFrameworkCore;
 
 namespace FileUploadSystem.API.Controllers
 {
@@ -78,6 +79,33 @@ namespace FileUploadSystem.API.Controllers
             {
                 return StatusCode(500, $"Sunucu hatası: {ex.Message}");
             }
+        }
+
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> GetUserDocuments([FromServices] ApplicationDbContext context)
+        {
+            var userIdString = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            if (string.IsNullOrEmpty(userIdString))
+                return Unauthorized("Kullanıcı kimliği doğrulanamadı.");
+
+            if (!Guid.TryParse(userIdString, out Guid userGuid))
+                return BadRequest("Geçersiz kullanıcı kimliği formatı.");
+
+            var documents = await context.Documents
+                .Where(d => d.UserId == userGuid && !d.IsDeleted)
+                .OrderByDescending(d => d.CreatedDate)
+                .Select(d => new
+                {
+                    Id = d.Id,
+                    Name = d.Name,
+                    CreatedDate = d.CreatedDate
+                })
+                .ToListAsync();
+
+            return Ok(documents);
         }
 
         [HttpPost("chunked-upload")]

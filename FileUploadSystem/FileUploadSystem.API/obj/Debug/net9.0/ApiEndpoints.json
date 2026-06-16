@@ -59,6 +59,16 @@
   },
   {
     "ContainingType": "FileUploadSystem.API.Controllers.DocumentController",
+    "Method": "GetUserDocuments",
+    "RelativePath": "api/Document",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FileUploadSystem.API.Controllers.DocumentController",
     "Method": "UploadChunk",
     "RelativePath": "api/Document/chunked-upload",
     "HttpMethod": "POST",
