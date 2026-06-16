@@ -10,16 +10,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Hangfire;
 using FileUploadSystem.Infrastructure.Jobs;
+using FileUploadSystem.API.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -61,7 +60,6 @@ builder.Services.AddHangfire(configuration => configuration
 
 builder.Services.AddScoped<IThumbnailJob, ThumbnailJob>();
 
-// 1. EKLENEN KISIM: CORS Politikasý Tanýmlama
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp",
@@ -71,7 +69,13 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod());
 });
 
+builder.Services.AddProblemDetails();
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
 var app = builder.Build();
+
+app.UseExceptionHandler();
 
 if (app.Environment.IsDevelopment())
 {
@@ -80,7 +84,6 @@ if (app.Environment.IsDevelopment())
 }
 
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
@@ -88,7 +91,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// 2. EKLENEN KISIM: CORS Politikasýný Uygulama (Kimlik doðrulamadan hemen önce olmalý!)
 app.UseCors("AllowReactApp");
 
 app.UseAuthentication();
