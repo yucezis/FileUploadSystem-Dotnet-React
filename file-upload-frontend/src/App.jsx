@@ -19,31 +19,35 @@ const Dashboard = () => {
     const { logout } = useContext(AuthContext);
     const [files, setFiles] = useState([]);
 
-    useEffect(() => {
-        const fetchFiles = async () => {
-            try {
-                const response = await api.get("/document"); 
-                
-                const formattedFiles = response.data.map(doc => ({
-                    id: doc.id,
-                    name: doc.name,
-                    size: doc.size ? (doc.size / (1024 * 1024)).toFixed(2) + " MB" : "-", 
-                    uploadDate: new Date(doc.createdDate).toLocaleDateString("tr-TR", { 
-                        day: '2-digit', month: 'short', year: 'numeric' 
-                    })
-                }));
-                
-                setFiles(formattedFiles);
-            } catch (error) {
-                console.error("Dosyalar çekilirken hata oluştu:", error);
-            }
-        };
+    // 1. Dosyaları çekme fonksiyonu (Versiyon numarası mantığı eklendi)
+    const fetchFiles = async () => {
+        try {
+            const response = await api.get("/document"); 
+            
+            const formattedFiles = response.data.map(doc => ({
+                id: doc.id,
+                // Versiyon 1'den büyükse ismin yanına (v2), (v3) ekle
+                name: doc.version > 1 ? `${doc.name} (v${doc.version})` : doc.name,
+                size: doc.size ? (doc.size / (1024 * 1024)).toFixed(2) + " MB" : "-", 
+                uploadDate: new Date(doc.createdDate).toLocaleDateString("tr-TR", { 
+                    day: '2-digit', month: 'short', year: 'numeric' 
+                })
+            }));
+            
+            setFiles(formattedFiles);
+        } catch (error) {
+            console.error("Dosyalar çekilirken hata oluştu:", error);
+        }
+    };
 
+    // 2. Sayfa ilk açıldığında çalışır
+    useEffect(() => {
         fetchFiles();
     }, []); 
 
-    const handleUploadSuccess = (newFile) => {
-        setFiles(prevFiles => [newFile, ...prevFiles]);
+    // 3. Yükleme başarılı olunca direkt backend'den en güncel listeyi ister
+    const handleUploadSuccess = () => {
+        fetchFiles();
     };
 
     const handleDelete = async (id) => {
